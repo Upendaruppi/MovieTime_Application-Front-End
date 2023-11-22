@@ -1,0 +1,20 @@
+.carousel-item img {
+    height: 750px;
+    object-fit: cover; 
+  } 
+  .navbar {
+    height: 50px; 
+    border: 20px;
+    border-radius: 1px;
+}
+.title-background {
+    background-color: rgba(93, 149, 206, 0.215);
+    color: rgb(0, 0, 0); 
+   
+  }
+  .delete {
+    width: auto;
+    margin: 0; 
+    background-color: red;
+    color: white;
+}

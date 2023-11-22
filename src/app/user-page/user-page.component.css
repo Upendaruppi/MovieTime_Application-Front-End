@@ -1,0 +1,53 @@
+a.nav-link.active {
+    color: red;
+  }
+
+    .navbar {
+        height: 50px; 
+        border: 20px;
+        border-radius: 1px;
+    }
+
+   
+  .title-background {
+    background-color: rgba(93, 149, 206, 0.215);
+    color: rgb(0, 0, 0); 
+   
+  }
+
+
+    .carousel-item img {
+      height: 800px;
+      object-fit: cover; 
+    }
+
+    
+    .buySize {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+  }
+  
+  .input {
+      width: 100%; 
+      text-align: center; 
+  }
+  
+  .buy {
+      width: auto;
+      margin: 0; 
+      background-color: red;
+      color: white;
+  }
+  
+  .csl{
+    border: 0px;
+  }
+  
+ .button{
+  margin: 10px;
+  margin-top: 0px;
+ margin-left: 10px;  
+ }

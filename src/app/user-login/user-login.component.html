@@ -1,0 +1,23 @@
+
+<div class="bgimg1">
+  <div class="bg">
+
+
+<form  (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+  
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" value="Mark"   required style="width: 100vh;"  value="Mark" id="email" name="email" placeholder="enter email" [(ngModel)]="userLogin.email"  aria-describedby="emailHelp">
+      <div id="emailHelp" style="color: rgb(10, 103, 184);" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label  "   >Password</label>
+      <input type="password" class="form-control  " style="width: 100vh;" id="password" name="password" [(ngModel)]="userLogin.password"  placeholder="enter password"  value="Mark" required>
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary" >LogIn</button>
+    <button class="btn btn-primary button" (click)="newUser()">New User</button>
+  </form>
+</div>
+</div>

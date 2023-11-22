@@ -1,0 +1,78 @@
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="https://cdn-icons-gif.flaticon.com/6172/6172536.gif" alt="Logo" width="60" height="50"
+                  class="d-inline-block active align-text-top">
+              MovieTime
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/user/page']">Movies</a>
+  
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/user/tickets']">Tickets</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-danger" (click)="userLogOut()">Logout</button>
+                </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <h1>{{movieName1}}</h1>
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src={{movie.posterLink}} class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block title-background">
+            <h3>{{movie.movieName}}</h3>
+            <p>Director: {{movie.director}}</p>
+            <div class="input-group mb-3 buySize">
+                <span class="align-middle">
+                   
+                    <div class="d-flex flex-row">
+                   
+                  
+                        <select class="form-select"  placeholder="Select showtime" style="background-color: rgba(192, 192, 192, 0.53);" [(ngModel)]="showTime">
+                            <option value="" disabled selected>Select Showtime</option>
+                            <option value="Morning Show">Morning Show</option>
+                            <option value="Second Show">Second Show</option>
+                            <option value="Evening show">Evening show</option>
+                            <option value="Night show">Night show</option>
+                        </select>
+
+                        <select class="form-select"  placeholder="Select theatre" style="background-color: rgba(192, 192, 192, 0.681);" [(ngModel)]="theatre">
+                            <option value="" disabled selected> Select Theatre</option>
+                        <option value="Theatre 1">Theatre 1</option>
+                        <option value="Theatre 2">Theatre 2</option>
+                        <option value="Theatre 3">Theatre 3</option>
+                      </select>
+
+                      <select class="form-select" style="background-color: rgba(192, 192, 192, 0.692);"  placeholder="Select theatre" [(ngModel)]="date">
+                        <option value="" disabled selected> Select Date</option>
+                    <option value="13/11/2023">13/11/2023</option>
+                    <option value="14/11/2023">14/11/2023</option>
+                    <option value="15/11/2023">15/11/2023</option>
+                  </select>
+                        
+                      
+                      
+
+                    </div>
+
+                    <button class="btn btn-outline-secondary buy" type="button" id="showTime" (click)="buyTicket(movie.movieId)">Buy</button>
+                </span>
+            </div>
+              
+
+        </div>

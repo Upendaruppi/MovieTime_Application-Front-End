@@ -1,0 +1,61 @@
+<div class="bgimg">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="https://cdn-icons-gif.flaticon.com/6172/6172536.gif" alt="Logo" width="60" height="50"
+                  class="d-inline-block active align-text-top">
+              MovieTime
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/user/page']">Movies</a>
+  
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/user/tickets']">Tickets</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-danger" (click)="userLogOut()">Logout</button>
+                </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  <h5 style="color: beige;">
+        Your Tickets are</h5>
+       <h1>{{uId}}</h1>
+
+
+       <div class="ticket-container d-flex flex-wrap justify-content-around m-3">
+        <div class="card ticket d-flex flex-column " style="padding: 10px;" *ngFor="let ticket of tickets, let i = index">
+          <div class="card-header text">Ticket </div>
+          <div class="card-body">
+            <h3>{{ i + 1 }}</h3> 
+            <h1>Movie : {{ticket.movie.movieName}}</h1>
+            <h4 class="card-title">Ticket ID : {{ ticket.ticketId }}</h4>
+            <h4 class="card-title">Theatre : {{ ticket.theatre}}</h4>
+            <h4 class="card-title">Date : {{ ticket.date}}</h4>
+      
+            <p class="card-text">Showtime : {{ ticket.showTime}}</p>
+
+            <button class="btn btn-danger "  type="button" id="showTime" (click)="deleteTicket(ticket.ticketId)">Cancel Ticket</button>
+
+          </div>
+        </div>
+      </div>
+      
+    
+    
+    
+    
+    
+  

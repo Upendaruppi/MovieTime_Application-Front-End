@@ -1,0 +1,17 @@
+.bgimg{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://cdn.pixabay.com/animation/2023/03/22/17/46/17-46-37-588_512.gif");
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+
+}
+.navbar {
+    height: 60px; 
+    border: 20px;
+    border-radius: 1px;
+}

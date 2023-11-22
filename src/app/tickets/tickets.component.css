@@ -1,0 +1,48 @@
+.bgimg{
+
+    background-image: url("https://static4.depositphotos.com/1014956/312/i/450/depositphotos_3128401-stock-photo-cinema-tickets.jpg");
+    width: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    max-height: fit-content;
+    background-size: cover;
+}
+.ticket {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: transparent; 
+    border: 1px solid rgba(17, 203, 236, 0.831);
+    color: rgb(228, 192, 15);
+}
+
+
+.navbar {
+    height: 60px; 
+    border: 20px;
+    border-radius: 1px;
+}
+.container{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+.box{
+height: 100px;
+width: 100px;
+border: 10px;
+margin: 10px;
+
+background-color: white;
+}
+.ticket-container {
+    display: flex;
+ 
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+

@@ -1,0 +1,27 @@
+
+<div class="bgimg1">
+    <div class="bg">
+  
+  
+  <form (ngSubmit)="onSubmit()" >
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" style="width: 100vh;"  class="form-control" id="email" name="email" placeholder="enter email" [(ngModel)]="user.email"  aria-describedby="emailHelp">
+        <div id="emailHelp" style="color: rgb(10, 103, 184);" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="email" style="width: 100vh;"  class="form-control" id="name" name="name" placeholder="enter name" [(ngModel)]="user.name"  >
+
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+
+        <input type="password" class="form-control  " style="width: 100vh;" id="password" name="password" [(ngModel)]="user.password"  placeholder="enter password">
+      </div>
+      
+
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+  </div>

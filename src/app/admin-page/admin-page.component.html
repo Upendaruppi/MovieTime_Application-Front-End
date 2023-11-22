@@ -1,0 +1,71 @@
+<div class="bgimg">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-gif.flaticon.com/6172/6172536.gif" alt="Logo" width="60" height="50"
+                    class="d-inline-block active align-text-top">
+                MovieTime
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/admin/page']">Movies</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/add/movie']">Add Movies</a>
+                     </li> <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/add/admin']">Add Admin</a>
+                     </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-danger" (click)="adminLogut()">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<div id="carouselExampleCaptions" class="carousel slide csl" data-bs-ride="carousel" data-bs-interval="3000">
+    
+    <div class="carousel-inner"  data-bs-interval="100">
+        
+        <div class="carousel-item active">
+            <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-7991579.jpg&fm=jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block title-background">
+                <h1>MovieTime</h1>
+                <p>Experience the cinematic universe</p>
+            </div>
+        </div>
+    
+        <div class="carousel-item" *ngFor="let movie of movies">
+            <img [src]="movie.posterLink" class="d-block w-100 black-background" alt="...">
+            <div class="carousel-caption d-none d-md-block title-background">
+                <h3>{{movie.movieName}}</h3>
+                <p>Director: {{movie.director}}</p>
+                <div class="input-group mb-3 ">
+                    <button type="button" class="btn btn-danger " style="display: block; margin: 0 auto;" (click)="deleteMovie(movie.movieId)" >Delete</button>
+                    
+                </div>
+                    <button type="button" class="btn btn-info " style="display: block; margin: 0 auto;" (click)="updateMovie(movie)" >Update</button>
+                
+
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
